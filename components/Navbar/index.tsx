@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { LuSearch, LuShoppingCart, LuUserCircle2 } from 'react-icons/lu';
 import Logo from '@/public/images/logoVaquita.png';
 import Link from 'next/link';
+import DropdownBasic from '@/components/ui/DropdwonMenu';
+import mainMenuList from '@/service/mainMenuList';
 
 const Navbar = () => {
   return (
@@ -9,7 +11,7 @@ const Navbar = () => {
       <Link href='/'>
         <Image src={Logo} alt='Logo' width={50} height={50} />
       </Link>
-      <span>Menú</span>
+      <DropdownBasic navigationItems={mainMenuList} />
       {/* <div className='flex'>
         <label htmlFor='search-bar'></label>
         <input
